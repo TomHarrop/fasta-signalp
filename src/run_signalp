@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -eu
+
+transdecoder_results="output/renamed.fasta"
+signalp_results="output/signalp.out"
+signalp_gff="output/signalp.gff"
+
+signalp \
+    -f short \
+    -n "${signalp_gff}" \
+    "${transdecoder_results}" \
+    > "${signalp_results}"
